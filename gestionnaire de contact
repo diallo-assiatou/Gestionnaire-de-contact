@@ -1,0 +1,43 @@
+#gestinnaire de contact
+public class Main {
+    public static void main(String[] args) {
+    
+        ContactsManager myContactsManager = new ContactsManager();
+
+        
+        Contact friend1 = new Contact();
+        friend1.setName("valy");
+        friend1.setPhoneNumber("1234567890");
+        myContactsManager.addContact(friend1);
+
+        // Répéter les étapes pour 4 autres contacts
+        Contact friend2 = new Contact();
+        friend2.setName("zenab");
+        friend2.setPhoneNumber("0987654321");
+        myContactsManager.addContact(friend2);
+
+        Contact friend3 = new Contact();
+        friend3.setName("Bob");
+        friend3.setPhoneNumber("5555555555");
+        myContactsManager.addContact(friend3);
+
+        Contact friend4 = new Contact();
+        friend4.setName("Emily");
+        friend4.setPhoneNumber("7777777777");
+        myContactsManager.addContact(friend4);
+
+        Contact friend5 = new Contact();
+        friend5.setName("yasmine");
+        friend5.setPhoneNumber("9999999999");
+        myContactsManager.addContact(friend5);
+
+        
+        String friendNameToSearch = "zenab";
+        String phoneNumber = myContactsManager.searchContact(friendNameToSearch);
+        if (phoneNumber != null) {
+            System.out.println("Le numéro de téléphone de " + friendNameToSearch + " est : " + phoneNumber);
+        } else {
+            System.out.println("Le contact " + friendNameToSearch + " n'a pas été trouvé.");
+        }
+    }
+}
